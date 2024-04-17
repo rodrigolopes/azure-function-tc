@@ -17,7 +17,7 @@ public class TestContainersConfiguration {
         MountableFile functionFiles = MountableFile.forHostPath(Paths.get("target/azure-functions/azure-function-tc"));
 
 
-        return new GenericContainer<>("mcr.microsoft.com/azure-functions/java:4-java17-appservice")
+        return new GenericContainer<>("mcr.microsoft.com/azure-functions/java:4-java21-appservice")
                 .withCopyFileToContainer(functionFiles, "/home/site/wwwroot")
                 .withEnv("AzureWebJobsScriptRoot", "/home/site/wwwroot")
                 .withEnv("AzureFunctionsJobHost__Logging__Console__IsEnabled", "true")
