@@ -33,7 +33,8 @@ class MyAzureFunctionIT {
                 .response()
                 .asString();
 
-        assertThat(response ).isNotNull();
-        assertThat(response ).isEqualTo("TESTCONTAINERS");
+        assertThat(response)
+                .isNotNull()
+                .isEqualTo("TESTCONTAINERS");
     }
 }
